@@ -1,0 +1,236 @@
+:root {
+  --main-font: "Roboto", sans-serif;
+  --accent-color: #2196f3;
+  --headline-color: #212121;
+  --navigation-color: #212121;
+  --text-main-color: #757575;
+  --secondary-background: #f5f4fa;
+  --primary-background: #ffffff;
+  --light-button-background: #ffffff;
+  --text-dark-background: #ffffff;
+  --color-white-transparent: rgba(255, 255, 255, 0.6);
+  --background-footer: #2f303a;
+}
+
+body {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--text-main-color);
+  background: bisque;
+}
+/* Utility classes */
+.link {
+  text-decoration: none;
+  font-style: normal;
+}
+.list {
+  list-style: none;
+}
+.hidden {
+  display: none;
+}
+
+/* Hover and focus */
+.header-navigation-list-item-link:hover,
+.header-navigation-list-item-link:focus,
+.header-contacts-list-item-link:hover,
+.header-contacts-list-item-link:focus,
+.contacts-footer-list-item-link:hover,
+.contacts-footer-list-item-link:focus,
+.contacts-footer-list-item-address:hover,
+.contacts-footer-list-item-address:focus,
+.form-email:focus {
+  color: var(--accent-color);
+}
+.button:hover,
+.button:focus {
+  color: var(--accent-color);
+  background-color: var(--light-button-background);
+}
+
+/* Header */
+.logo {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+.logo .logo-web {
+  color: #2196f3;
+}
+
+.header-navigation-list-item-link,
+.header-contacts-list-item-link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--navigation-color);
+}
+.header-navigation .header-navigation-current {
+  color: var(--accent-color);
+}
+.header-contacts-list-item-link {
+  color: var(--text-main-color);
+}
+
+/* Hero */
+.hero-text {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dark-background);
+}
+
+/* Button */
+.button {
+  width: 200px;
+  height: 50px;
+  background-color: var(--accent-color);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--text-dark-background);
+
+  border: none;
+}
+
+/* Sections */
+.section-headline {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--headline-color);
+}
+
+.advantages-list-item-headline,
+.what-we-do-list-item-headline {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.advantages-list-item .advantages-list-item-headline {
+  color: var(--headline-color);
+}
+.what-we-do-list-item .what-we-do-list-item-headline {
+  text-align: center;
+  color: var(--text-dark-background);
+}
+
+/* Team */
+.team {
+  background: var(--secondary-background);
+}
+.team-list-item-headline-name,
+.team-list-item-text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+.team-list-item .team-list-item-headline-name {
+  font-weight: 500;
+  color: var(--headline-color);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--background-footer);
+}
+.contacts-footer-list-item-link {
+  color: var(--color-white-transparent);
+}
+
+.contacts-footer-list-item-address {
+  color: var(--text-dark-background);
+}
+.call-to-action-join-text,
+.call-to-action-subscribe-text {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--text-dark-background);
+}
+.form-email {
+  font-size: 16px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+
+  color: var(--color-white-transparent);
+  background: var(--background-footer);
+}
+
+/* Portfolio */
+.logo.logo-footer {
+  color: #ffffff;
+}
+.portfolio-list-item-link-headline {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--headline-color);
+}
+.portfolio-list-item-link-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--text-main-color);
+}
+.portfolio-list-item-link-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--text-dark-background);
+}
+/* Portfolio button */
+.portfolio-button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  border: none;
+  color: var(--headline-color);
+}
+.portfolio-button-primary {
+  color: var(--text-dark-background);
+  background: var(--accent-color);
+}
+.portfolio-button-secondary {
+  background: var(--light-button-backround);
+}
+/* Portfolio hovers */
+.portfolio-button:hover,
+.portfolio-button:focus {
+  color: var(--text-dark-background);
+  background: var(--accent-color);
+}
+/* .header-img {
+  background: url(img/Headerimg.png);
+  position: absolute;
+  width: 1600px;
+  height: 600px;
+  left: 0px;
+  top: 80px;
+} */
+/* .img-overlay {
+  position: absolute;
+  width: 1600px;
+  height: 600px;
+  left: 0px;
+  top: 80px;
+  background: rgba(47, 48, 58, 0.7);
+} */
