@@ -19,7 +19,7 @@
       <div class="page-header__wrapper">
         <nav class="page-header__nav">
           <a lang="en" class="logo page-header__logo" href="./index.html">
-            Web <span class="logo__studio logo__studio--black">Studio</span>
+            Web<span class="logo__studio logo__studio--black">Studio</span>
           </a>
           <ul class="site-nav">
             <li class="site-nav__item site-nav__item--current">
@@ -490,7 +490,7 @@
         </div>
       </div>
     </footer>
-    <div data-modal class="backdrop is-hidden" data-modal-close>
+    <div data-modal class="backdrop is-hidden">
       <div class="modal-wrapper">
         <button type="button" data-modal-close class="modal-form__close-button">
           <svg class="modal-form__svg" width="18" height="18">
@@ -537,11 +537,15 @@
               <use href="./img/sprite.svg#icon-email-form"></use>
             </svg>
           </label>
-          <textarea
-            name="comments"
-            class="modal-form__textarea"
-            placeholder="Комментарии"
-          ></textarea>
+          <label for="comments" class="modal-form__textarea-label">
+            <span class="modal-form__title">Комментарии</span>
+            <textarea
+              name="comments"
+              id="comments"
+              class="modal-form__textarea"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
           <label class="modal-form__checkbox-label" for="terms" name="terms">
             <input
               class="modal-form__checkbox"
