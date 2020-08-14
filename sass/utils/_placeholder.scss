@@ -1,0 +1,16 @@
+%list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+%link {
+  text-decoration: none;
+  font-style: normal;
+}
+%header-naviation {
+  @include text($fw: 500, $lh: 1.14, $ls: 0.02em);
+}
+%headline-style {
+  @include text($fw: 700, $fs: 36px, $lh: 1.17, $color: $headline-color);
+  text-align: center;
+}

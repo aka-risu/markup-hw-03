@@ -1,0 +1,208 @@
+.modal-wrapper {
+  width: 528px;
+  height: 581px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  background-color: #fff;
+}
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+.modal-form {
+  text-align: center;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.is-hidden {
+  top: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 250ms $time-function;
+}
+.modal-form__close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* display: flex; */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  transition: all 250ms $time-function;
+}
+.modal-form__close-button:hover,
+.modal-form__close-button:focus {
+  fill: $accent-color;
+}
+/* .modal-form__svg {
+  width: 18px;
+  height: 18px;
+} */
+.modal-form__headline {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+.modal-form__label {
+  position: relative;
+  display: block;
+  width: 448px;
+  height: 40px;
+  margin-bottom: 28px;
+}
+.modal-form__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-18px);
+  transition: all 250ms $time-function;
+}
+.modal-form__input {
+  margin: 0;
+  padding: 0;
+  padding-left: 42px;
+  width: 100%;
+  height: 100%;
+  transition: all 250ms $time-function;
+}
+.modal-form__input,
+.modal-form__textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: all 250ms $time-function;
+}
+
+.modal-form__input-svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: all 250ms linear;
+}
+.modal-form__textarea-label,
+.modal-form__title {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+}
+/* .modal-form__textarea-label {
+  margin-bottom: 4px;
+} */
+.modal-form__textarea-label {
+  position: relative;
+}
+.modal-form__textarea {
+  padding-left: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 16px;
+  resize: none;
+  width: 448px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+.modal-form__textarea::placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-form__checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+.modal-form__checkbox-text {
+  margin-right: 4px;
+}
+.modal-form__checkbox-link {
+  color: #2196f3;
+}
+.modal-form__checkbox {
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal-form__checkbox-icon {
+  /* display: inline-block; */
+  position: relative;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid #212121;
+  background-color: $primary-background;
+  border-radius: 2px;
+  transition: all 250ms $time-function;
+}
+.modal-form__ckeckbox-svg {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  opacity: 0;
+  background-color: $accent-color;
+  border-radius: 2px;
+  transition: all 250ms $time-function;
+}
+.modal-form__checkbox:checked ~ .modal-form__checkbox-icon {
+  opacity: 0;
+}
+.modal-form__checkbox:checked + .modal-form__ckeckbox-svg {
+  opacity: 1;
+  /* z-index: 2; */
+}
+/* .modal-form__input:focus + .modal-form__title,
+.modal-form__input:not(:placeholder-shown) + .modal-form__title {
+} */
+.modal-form__input:focus,
+.modal-form__textarea:focus {
+  border-color: $accent-color;
+}
+.modal-form__input:focus ~ .modal-form__input-svg {
+  fill: $accent-color;
+}

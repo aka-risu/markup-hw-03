@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="./css/portfolio.min.css" />
   </head>
   <body>
     <!-- Navigation menu -->
@@ -301,24 +301,20 @@
           <a lang="en" class="logo footer__logo" href="./index.html">
             Web <span class="logo__studio logo__studio--white">Studio</span>
           </a>
-          <address class="contacts contacts--footer">
-            <ul class="contacts__list contacts__list--footer">
-              <li class="contacts__item contacts__item--footer">
-                <a class="contacts__address contacts__address--footer" href=""
+          <address class="address">
+            <ul class="address__list">
+              <li class="address__item">
+                <a class="address__location" href=""
                   >г. Киев, пр-т Леси Украинки, 26</a
                 >
               </li>
-              <li class="contacts__item contacts__item--footer">
-                <a
-                  class="contacts__link contacts__link--footer"
-                  href="mailto:info@devstudio.com"
+              <li class="address__item">
+                <a class="address__link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>
-              <li class="contacts__item contacts__item--footer">
-                <a
-                  class="contacts__link contacts__link--footer"
-                  href="tel:+380961111111"
+              <li class="address__item">
+                <a class="address__link" href="tel:+380961111111"
                   >+38 096 111 11 11</a
                 >
               </li>
@@ -372,12 +368,13 @@
         <div class="subscribe">
           <b class="subscribe__headline">Подпишитесь на рассылку</b>
           <div class="subscribe-form__wrapper">
-            <form class="subscribe-form js-speaker-form">
+            <form class="subscribe-form">
               <input
                 class="form__email"
                 type="email"
                 name="email"
                 placeholder="E-mail"
+                autocomplete="email"
               />
               <button class="button" type="submit">
                 Подписаться

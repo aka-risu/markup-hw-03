@@ -1,0 +1,34 @@
+.button {
+  @include center($display: inline-flex);
+
+  padding: 10px 32px;
+  min-width: 200px;
+  /* width: 200px;
+  height: 50px; */
+  background-color: $accent-color;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  @include text($main-font, 700, 16px, 1.87, 0.06em, $text-dark-background);
+  cursor: pointer;
+  border: none;
+  fill: $text-dark-background;
+
+  transition: color 250ms $time-function, background-color 250ms $time-function,
+    fill 250ms $time-function;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    // fill: $accent-color;
+  }
+}
+.hero__button {
+  margin-right: auto;
+  margin-left: auto;
+}
+.button__icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}

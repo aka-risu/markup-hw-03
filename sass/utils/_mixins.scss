@@ -1,0 +1,33 @@
+@mixin wrapper($width: 1200px, $ml: auto, $mr: auto, $pl: 15px, $pr: 15px) {
+  margin-left: $ml;
+  margin-right: $mr;
+
+  width: $width;
+  padding-left: $pl;
+  padding-right: $pr;
+}
+@mixin vertical-center($display: flex, $align-items: center) {
+  display: $display;
+  align-items: $align-items;
+}
+@mixin center($display: flex, $align-items: center, $justify-content: center) {
+  display: $display;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin text(
+  $ff: $main-font,
+  $fw: 400,
+  $fs: 14px,
+  $lh: 1.71,
+  $ls: 0.03em,
+  $color: $text-main-color
+) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  color: $color;
+}
