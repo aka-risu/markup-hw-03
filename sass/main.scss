@@ -6,9 +6,12 @@
 @import "./base/body";
 @import "./layout/index/index";
 
-@import "./components/header/page-header";
+// @import "./components/header/page-header";
 @import "./components/logo";
 @import "./components/footer/footer";
 @import "./components/modal-window";
 @import "./components/button";
 @import "./components/social-list";
+@import "./components/header/mobile-header";
+@import "./components/header/tablet-header";
+@import "./components/header/desktop-header";

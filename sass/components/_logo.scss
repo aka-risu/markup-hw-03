@@ -1,7 +1,10 @@
 .logo {
   @extend %link;
   // @include text($ff: Raleway, $fw: 700, $fs: 26px, $lh: 1.19, $color: #2196f3);
-  @include text(Raleway, 700, 26px, 1.19, 0.03em, #2196f3);
+  // @include text(Raleway, 700, 26px, 1.19, 0.03em, #2196f3);
+  @include text(Raleway, 700, 24px, 1.17, 0.03em, #2196f3);
+  @media screen and(max-width: 480px) {
+  }
 }
 .logo__studio--black {
   color: #212121;

@@ -1,0 +1,37 @@
+.page-header__wrapper {
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+.page-header__logo {
+  @media screen and (min-width: 1200px) {
+    margin-right: 85px;
+  }
+}
+.page-header__nav {
+  @media screen and (min-width: 1200px) {
+    margin-right: 305px;
+  }
+}
+.contacts__list {
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+.contacts__item:not(:last-child) {
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+.contacts__icon {
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
+}
+.contacts__link {
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}

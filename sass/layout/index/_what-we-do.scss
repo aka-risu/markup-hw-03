@@ -3,8 +3,14 @@
   padding-top: 47px;
 }
 .what-we-do__wrapper {
-  @include wrapper;
+  // @include wrapper;
+
   text-align: center;
+  @media screen and(max-width: 767px) {
+    max-width: 480px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .what-we-do__headline {
   margin-top: 0;
@@ -12,15 +18,15 @@
   @extend %headline-style;
 }
 .what-we-do__list {
-  display: flex;
+  // display: flex;
   @extend %list;
 }
 .what-we-do__item {
   position: relative;
 
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+  // &:not(:last-child) {
+  //   margin-right: 30px;
+  // }
 }
 
 .what-we-do__img {

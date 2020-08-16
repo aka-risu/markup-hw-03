@@ -3,7 +3,12 @@
   padding-top: 94px;
 }
 .clients__wrapper {
-  @include wrapper;
+  // @include wrapper;
+  @media screen and(max-width: 767px) {
+    max-width: 480px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .clients__headline {
   margin-top: 0;
@@ -11,13 +16,13 @@
   @extend %headline-style;
 }
 .clients__list {
-  @include center;
+  // @include center;
   @extend %list;
 }
 
-.clients__item:not(:last-child) {
-  margin-right: 30px;
-}
+// .clients__item:not(:last-child) {
+//   margin-right: 30px;
+// }
 .clients__link {
   @include center;
   width: 170px;

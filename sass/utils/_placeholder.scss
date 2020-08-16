@@ -14,3 +14,6 @@
   @include text($fw: 700, $fs: 36px, $lh: 1.17, $color: $headline-color);
   text-align: center;
 }
+%wrapper-mobile {
+  @include wrapper($width: 480px);
+}
