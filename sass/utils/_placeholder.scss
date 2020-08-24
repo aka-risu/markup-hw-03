@@ -7,13 +7,37 @@
   text-decoration: none;
   font-style: normal;
 }
+%wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media screen and (max-width: 767px) {
+    max-width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
 %header-naviation {
   @include text($fw: 500, $lh: 1.14, $ls: 0.02em);
 }
 %headline-style {
   @include text($fw: 700, $fs: 36px, $lh: 1.17, $color: $headline-color);
-  text-align: center;
 }
 %wrapper-mobile {
   @include wrapper($width: 480px);
+}
+%headline-mobile {
+  @include text(
+    $ff: $main-font,
+    $fw: 700,
+    $fs: 28px,
+    $lh: 1.18,
+    $ls: 0.03em,
+    $color: $headline-color
+  );
 }

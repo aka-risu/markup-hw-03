@@ -1,0 +1,21 @@
+.page__team {
+  @media screen and(min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.team__headline {
+  @media screen and (min-width: 1200px) {
+    @include text($fw: 700, $fs: 36px, $lh: 1.17, $color: $headline-color);
+    margin-bottom: 50px;
+  }
+}
+
+.teammate-card {
+  @media screen and(min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}

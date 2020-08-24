@@ -1,8 +1,14 @@
 .page-header__wrapper {
   @media screen and (min-width: 768px) {
     display: flex;
+
+    align-items: baseline;
+  }
+}
+.page-header__container {
+  @media screen and (min-width: 768px) {
     @include center;
-    max-width: 768px;
+    // justify-content: space-between;
   }
 }
 .page-header__logo {
@@ -37,6 +43,8 @@
     padding-top: 32px;
     padding-bottom: 32px;
     display: block;
+    font-size: 14px;
+    letter-spacing: 1.14;
   }
 }
 .site-nav__item--current {
@@ -47,12 +55,6 @@
   }
 }
 
-.page-header__container {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    @include center;
-  }
-}
 .contacts__item:not(:last-child) {
   @media screen and (min-width: 768px) {
     margin-bottom: 10px;
@@ -61,10 +63,19 @@
 .contacts__list {
   @media screen and (min-width: 768px) {
     display: flex;
-    justify-content: start;
     flex-direction: column;
+    // justify-content: start;
+    align-items: flex-start;
   }
 }
+// .contacts__list {
+//   @media screen and (min-width: 768px) {
+//     // display: flex;
+//     justify-content: start;
+//     align-items: flex-start;
+//     // flex-direction: column;
+//   }
+// }
 .contacts__icon {
   @media screen and (min-width: 768px) {
     margin-right: 8px;

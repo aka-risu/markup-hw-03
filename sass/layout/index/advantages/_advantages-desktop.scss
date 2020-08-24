@@ -1,0 +1,14 @@
+.page__advantages {
+  @media screen and(min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 47px;
+  }
+}
+
+.advantages__item {
+  @media screen and(min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}

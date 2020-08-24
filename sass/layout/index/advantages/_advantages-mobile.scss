@@ -1,0 +1,37 @@
+.page__advantages {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.advantages__wrapper {
+  @extend %wrapper;
+}
+
+.advantages__list {
+  @extend %list;
+}
+
+.advantages__item {
+  @media screen and(max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+.advantages__img-wrapper {
+  @include center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  background-color: $secondary-background;
+}
+.advantages__item-headline {
+  margin-top: 0;
+  @include text($fw: 700, $lh: 1.14, $color: $headline-color);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.advantages__description {
+  margin-top: 0;
+  margin-bottom: 0;
+}

@@ -1,0 +1,16 @@
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .portfolio-card {
+    width: calc((100% - 60px) / 3);
+    &:nth-child(n + 4) {
+      margin-top: 30px;
+    }
+    &:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
+  }
+}

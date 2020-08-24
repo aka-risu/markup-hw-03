@@ -1,0 +1,25 @@
+.page__clients {
+  @media screen and(min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.clients__headline {
+  @media screen and (min-width: 1200px) {
+    @include text($fw: 700, $fs: 36px, $lh: 1.17, $color: $headline-color);
+    margin-bottom: 50px;
+  }
+}
+.clients__list {
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
+}
+.clients__item {
+  @media screen and(min-width: 1200px) {
+    width: calc((100% - 150px) / 6);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}

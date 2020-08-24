@@ -1,0 +1,47 @@
+.hero {
+  @extend %wrapper;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero.jpg);
+
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/Hero/hero@2x.webp");
+  }
+}
+@media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 3dppx),
+  screen and (min-resolution: 288dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/Hero/hero@3x.jpg");
+  }
+}
+.hero__text {
+  margin-top: 0;
+  margin-bottom: 30px;
+  @include text($main-font, 900, 26px, 1.62, 0.06em, $text-dark-background);
+  text-transform: uppercase;
+}

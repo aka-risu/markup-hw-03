@@ -1,22 +1,20 @@
 .page-header__wrapper {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  @media screen and(max-width: 767px) {
-    // @include wrapper($width: 480px);
-    max-width: 480px;
-  }
+  @extend %wrapper;
+  // text-align: center;
 }
 .page-header {
   border-bottom: 1px solid #ececec;
   @media screen and (max-width: 767px) {
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 100;
   }
 }
 .page-header__container {
   @media screen and (max-width: 767px) {
-    display: none;
+    opacity: 0;
     // display: flex;
     text-align: center;
     // justify-content: center;
@@ -24,18 +22,20 @@
     // flex-direction: column;
     padding-top: 60px;
     padding-bottom: 60px;
-    z-index: 999;
+    z-index: 100;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-
+    pointer-events: none;
     background: $primary-background;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
       0px 1px 3px rgba(0, 0, 0, 0.16);
+    transition: all 250ms $time-function;
   }
   &.is-open {
-    display: block;
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 
@@ -50,6 +50,7 @@
 }
 
 .mobile-menu {
+  height: 40px;
   display: block;
   padding: 0;
   border: none;
@@ -72,12 +73,13 @@
 
 /* site navigation block */
 .site-nav {
+  text-align: center;
   // display: flex;
   @extend %list;
 }
 .site-nav__item {
   position: relative;
-  @extend %header-naviation;
+
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: 40px;
@@ -89,8 +91,6 @@
   display: inline-block;
   color: $accent-color;
 
-  @media screen and (max-width: 767px) {
-  }
   &::after {
     position: absolute;
 
@@ -107,7 +107,13 @@
 .site-nav__link {
   display: block;
   @extend %link;
-  color: $headline-color;
+  @include text(
+    $fw: 500,
+    $fs: 18px,
+    $lh: 1.17,
+    $ls: 0.02em,
+    $color: $headline-color
+  );
   transition: color 250ms $time-function;
   &:hover,
   &:focus {
@@ -116,16 +122,19 @@
   @media screen and (max-width: 767px) {
     .site-nav__item--current & {
       color: $accent-color;
-      padding-bottom: 8px;
+      padding-bottom: 12px;
     }
   }
 }
-
 .contacts__list {
   @extend %list;
+  // display: inline-block;
+  // text-align: center;
+  // @include center;
+  // flex-direction: column;
 }
 .contacts__item {
-  @extend %header-naviation;
+  // display: inline-block;
   transition: color 250ms $time-function;
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
@@ -136,8 +145,14 @@
 
 .contacts__link {
   @extend %link;
-  @include vertical-center;
-  color: $text-main-color;
+  @include center;
+  @include text(
+    $fw: 500,
+    $fs: 18px,
+    $lh: 1.17,
+    $ls: 0.02em,
+    $color: $text-main-color
+  );
 
   &:hover,
   &:focus {

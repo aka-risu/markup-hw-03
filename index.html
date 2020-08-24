@@ -21,7 +21,13 @@
           <a lang="en" class="logo page-header__logo" href="./index.html">
             Web<span class="logo__studio logo__studio--black">Studio</span>
           </a>
-          <button type="button" class="mobile-menu" data-menu-button>
+          <button
+            type="button"
+            class="mobile-menu"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
             <svg width="40" height="40">
               <use
                 class="mobile-menu__menu-img"
@@ -34,7 +40,7 @@
             </svg>
           </button>
         </div>
-        <div class="page-header__container" data-menu>
+        <div class="page-header__container" id="menu-container" data-menu>
           <nav class="page-header__nav">
             <ul class="site-nav">
               <li class="site-nav__item site-nav__item--current">
@@ -150,34 +156,83 @@
           </h2>
           <ul class="what-we-do__list">
             <li class="what-we-do__item">
-              <img
-                class="what-we-do__img"
-                src="/img/What-we-do/imgcomputer.jpg"
-                alt="Компьютер"
-                width="340"
-              />
+              <picture class="what-we-do__img">
+                <source
+                  srcset="
+                    ./img/What-we-do/imgcomputer.webp     370w,
+                    ./img/What-we-do/imgcomputer@2x.webp  740w,
+                    ./img/What-we-do/imgcomputer@3x.webp 1110w
+                  "
+                  sizes="370px"
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./img/What-we-do/imgcomputer.jpg     370w,
+                    ./img/What-we-do/imgcomputer@2x.jpg  740w,
+                    ./img/What-we-do/imgcomputer@3x.jpg 1110w
+                  "
+                  sizes="370px"
+                  src="/img/What-we-do/imgcomputer.jpg"
+                  type="image/jpeg"
+                  alt="Компьютер"
+                />
+              </picture>
               <h3 class="what-we-do__item-headline">
                 Десктопные приложения
               </h3>
             </li>
             <li class="what-we-do__item">
-              <img
-                class="what-we-do__img"
-                src="/img/What-we-do/smartphone.jpg"
-                alt="Смартфон"
-                width="340"
-              />
+              <picture class="what-we-do__img">
+                <source
+                  srcset="
+                    ./img/What-we-do/smartphone.webp     370w,
+                    ./img/What-we-do/smartphone@2x.webp  740w,
+                    ./img/What-we-do/smartphone@3x.webp 1110w
+                  "
+                  sizes="370px"
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./img/What-we-do/smartphone.jpg     370w,
+                    ./img/What-we-do/smartphone@2x.jpg  740w,
+                    ./img/What-we-do/smartphone@3x.jpg 1110w
+                  "
+                  sizes="370px"
+                  src="/img/What-we-do/smartphone.jpg"
+                  type="image/jpeg"
+                  alt="Смартфон"
+                />
+              </picture>
+
               <h3 class="what-we-do__item-headline">
                 Мобильные приложения
               </h3>
             </li>
             <li class="what-we-do__item">
-              <img
-                class="what-we-do__img"
-                src="/img/What-we-do/computer.jpg"
-                alt="Компьютер"
-                width="340"
-              />
+              <picture class="what-we-do__img">
+                <source
+                  srcset="
+                    ./img/What-we-do/computer.webp     370w,
+                    ./img/What-we-do/computer@2x.webp  740w,
+                    ./img/What-we-do/computer@3x.webp 1110w
+                  "
+                  sizes="370px"
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./img/What-we-do/computer.jpg     370w,
+                    ./img/What-we-do/computer@2x.jpg  740w,
+                    ./img/What-we-do/computer@3x.jpg 1110w
+                  "
+                  sizes="370px"
+                  src="/img/What-we-do/computer.jpg"
+                  type="image/jpeg"
+                  alt="Компьютер"
+                />
+              </picture>
               <h3 class="what-we-do__item-headline">
                 Дизайнерские решения
               </h3>
@@ -191,13 +246,68 @@
           <h2 class="team__headline">Наша команда</h2>
           <ul class="team__list">
             <li class="teammate-card">
-              <img
-                class="teammate-card__img"
-                src="/img/Teammates/Nikolai.jpg"
-                alt="Фото Николай Кучеренко"
-                width="270"
-                height="260"
-              />
+              <picture class="teammate-card__img">
+                <source
+                  srcset="
+                    ./img/Teammates/webp/Nikolai-desktop-270.webp    270w,
+                    ./img/Teammates/webp/Nikolai-desktop-540@2x.webp 540w,
+                    ./img/Teammates/webp/Nikolai-desktop-810@3x.webp 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/Nikolai-desktop-270.jpg    270w,
+                    ./img/Teammates/Nikolai-desktop-540@2x.jpg 540w,
+                    ./img/Teammates/Nikolai-desktop-810@3x.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/webp/Nikolai-tablet-354.webp      354w,
+                    ./img/Teammates/webp/Nikolai-tablet-708@2x.webp   708w,
+                    ./img/Teammates/webp/Nikolai-tablet-1062@3x.webp 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/Nikolai-tablet-354.jpg      354w,
+                    ./img/Teammates/Nikolai-tablet-708@2x.jpg   708w,
+                    ./img/Teammates/Nikolai-tablet-1062@3x.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/webp/Nikolai-mobile.webp     450w,
+                    ./img/Teammates/webp/Nikolai-mobile@2x.webp  900w,
+                    ./img/Teammates/webp/Nikolai-mobile@3x.webp 1350w
+                  "
+                  sizes="(min-width: 480px) 450px"
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./img/Teammates/Nikolai-mobile.jpg     450w,
+                    ./img/Teammates/Nikolai-mobile@2x.jpg  900w,
+                    ./img/Teammates/Nikolai-mobile@3x.jpg 1350w
+                  "
+                  sizes="(min-width: 480px) 450px"
+                  src="/img/Teammates/Nikolai-desktop-270.jpg"
+                  alt="Фото Николай Кучеренко"
+                />
+              </picture>
+
               <h3 class="teammate-card__name">Николай Кучеренко</h3>
               <p class="teammate-card__job" lang="en">Product Designer</p>
               <ul class="social-list">
@@ -232,13 +342,68 @@
               </ul>
             </li>
             <li class="teammate-card">
-              <img
-                class="teammate-card__img"
-                src="/img/Teammates/Olga.jpg"
-                alt="Фото Ольга Иванова"
-                width="270"
-                height="260"
-              />
+              <picture class="teammate-card__img">
+                <source
+                  srcset="
+                    ./img/Teammates/webp/Olga-desktop-270.webp    270w,
+                    ./img/Teammates/webp/Olga-desktop-540@2x.webp 540w,
+                    ./img/Teammates/webp/Olga-desktop-810@3x.webp 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/Olga-desktop-270.jpg    270w,
+                    ./img/Teammates/Olga-desktop-540@2x.jpg 540w,
+                    ./img/Teammates/Olga-desktop-810@3x.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/webp/Olga-tablet-354.webp      354w,
+                    ./img/Teammates/webp/Olga-tablet-708@2x.webp   708w,
+                    ./img/Teammates/webp/Olga-tablet-1062@3x.webp 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/Olga-tablet-354.jpg      354w,
+                    ./img/Teammates/Olga-tablet-708@2x.jpg   708w,
+                    ./img/Teammates/Olga-tablet-1062@3x.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/webp/Olga-mobile.webp     450w,
+                    ./img/Teammates/webp/Olga-mobile@2x.webp  900w,
+                    ./img/Teammates/webp/Olga-mobile@3x.webp 1350w
+                  "
+                  sizes="(min-width: 480px) 450px"
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./img/Teammates/Olga-mobile.jpg     450w,
+                    ./img/Teammates/Olga-mobile@2x.jpg  900w,
+                    ./img/Teammates/Olga-mobile@3x.jpg 1350w
+                  "
+                  sizes="(min-width: 480px) 450px"
+                  src="/img/Teammates/Olga-desktop-270.jpg"
+                  alt="Фото Ольга Иванова"
+                />
+              </picture>
+
               <h3 class="teammate-card__name">Ольга Иванова</h3>
               <p class="teammate-card__job" lang="en">Frontend Developer</p>
               <ul class="social-list">
@@ -273,13 +438,67 @@
               </ul>
             </li>
             <li class="teammate-card">
-              <img
-                class="teammate-card__img"
-                src="/img/Teammates/Andrew.jpg"
-                alt="Фото Андрей Шевченко"
-                width="270"
-                height="260"
-              />
+              <picture class="teammate-card__img">
+                <source
+                  srcset="
+                    ./img/Teammates/webp/Andrew-desktop-270.webp    270w,
+                    ./img/Teammates/webp/Andrew-desktop-540@2x.webp 540w,
+                    ./img/Teammates/webp/Andrew-desktop-810@3x.webp 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/Andrew-desktop-270.jpg    270w,
+                    ./img/Teammates/Andrew-desktop-540@2x.jpg 540w,
+                    ./img/Teammates/Andrew-desktop-810@3x.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/webp/Andrew-tablet-354.webp      354w,
+                    ./img/Teammates/webp/Andrew-tablet-708@2x.webp   708w,
+                    ./img/Teammates/webp/Andrew-tablet-1062@3x.webp 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/Andrew-tablet-354.jpg      354w,
+                    ./img/Teammates/Andrew-tablet-708@2x.jpg   708w,
+                    ./img/Teammates/Andrew-tablet-1062@3x.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/webp/Andrew-mobile.webp     450w,
+                    ./img/Teammates/webp/Andrew-mobile@2x.webp  900w,
+                    ./img/Teammates/webp/Andrew-mobile@3x.webp 1350w
+                  "
+                  sizes="(min-width: 480px) 450px"
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./img/Teammates/Andrew-mobile.jpg     450w,
+                    ./img/Teammates/Andrew-mobile@2x.jpg  900w,
+                    ./img/Teammates/Andrew-mobile@3x.jpg 1350w
+                  "
+                  sizes="(min-width: 480px) 450px"
+                  src="/img/Teammates/Andrew-desktop-270.jpg"
+                  alt="Фото Андрей Шевченко"
+                />
+              </picture>
               <h3 class="teammate-card__name">Андрей Шевченко</h3>
               <p class="teammate-card__job" lang="en">Marketing</p>
               <ul class="social-list">
@@ -311,13 +530,67 @@
               </ul>
             </li>
             <li class="teammate-card">
-              <img
-                class="teammate-card__img"
-                src="/img/Teammates/Ivan.jpg"
-                alt="Фото Иван Николаев"
-                width="270"
-                height="260"
-              />
+              <picture class="teammate-card__img">
+                <source
+                  srcset="
+                    ./img/Teammates/webp/Ivan-desktop-270.webp    270w,
+                    ./img/Teammates/webp/Ivan-desktop-540@2x.webp 540w,
+                    ./img/Teammates/webp/Ivan-desktop-810@3x.webp 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/Ivan-desktop-270.jpg    270w,
+                    ./img/Teammates/Ivan-desktop-540@2x.jpg 540w,
+                    ./img/Teammates/Ivan-desktop-810@3x.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/webp/Ivan-tablet-354.webp      354w,
+                    ./img/Teammates/webp/Ivan-tablet-708@2x.webp   708w,
+                    ./img/Teammates/webp/Ivan-tablet-1062@3x.webp 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/Ivan-tablet-354.jpg      354w,
+                    ./img/Teammates/Ivan-tablet-708@2x.jpg   708w,
+                    ./img/Teammates/Ivan-tablet-1062@3x.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./img/Teammates/webp/Ivan-mobile.webp     450w,
+                    ./img/Teammates/webp/Ivan-mobile@2x.webp  900w,
+                    ./img/Teammates/webp/Ivan-mobile@3x.webp 1350w
+                  "
+                  sizes="(min-width: 480px) 450px"
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./img/Teammates/Ivan-mobile.jpg     450w,
+                    ./img/Teammates/Ivan-mobile@2x.jpg  900w,
+                    ./img/Teammates/Ivan-mobile@3x.jpg 1350w
+                  "
+                  sizes="(min-width: 480px) 450px"
+                  src="/img/Teammates/Ivan-desktop-270.jpg"
+                  alt="Фото Иван Николаев"
+                />
+              </picture>
               <h3 class="teammate-card__name">Иван Николаев</h3>
               <p class="teammate-card__job" lang="en">UI Designer</p>
               <ul class="social-list">
@@ -476,7 +749,10 @@
         <div class="subscribe">
           <b class="subscribe__headline">Подпишитесь на рассылку</b>
           <div class="subscribe-form__wrapper">
-            <form class="subscribe-form">
+            <form
+              class="subscribe-form"
+              action="mailto:kyr.anastasiia@gmail.com"
+            >
               <input
                 class="form__email"
                 type="email"
@@ -499,6 +775,7 @@
         </div>
       </div>
     </footer>
+    <!-- Модальное окно -->
     <div data-modal class="backdrop is-hidden">
       <div class="modal-wrapper">
         <button type="button" data-modal-close class="modal-form__close-button">
@@ -555,7 +832,7 @@
               placeholder="Введите текст"
             ></textarea>
           </label>
-          <label class="modal-form__checkbox-label" for="terms" name="terms">
+          <label class="modal-form__checkbox-label" for="terms">
             <input
               class="modal-form__checkbox"
               type="checkbox"

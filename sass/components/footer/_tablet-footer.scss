@@ -1,0 +1,26 @@
+.footer__wrapper {
+  @media screen and(min-width: 768px) {
+    display: flex;
+    // text-align: center;
+    // flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+}
+.footer__contacts-wrapper,
+.join {
+  @media screen and(min-width: 768px) and (max-width: 1199px) {
+    flex-grow: 2;
+  }
+}
+// .join {
+//   @media screen and(min-width: 768px) and (max-width: 1199px) {
+//     margin-bottom: 60px;
+//   }
+// }
+.form__email {
+  @media screen and(min-width: 768px) {
+    width: 450px;
+  }
+}

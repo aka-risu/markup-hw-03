@@ -1,0 +1,20 @@
+@media screen and (min-width: 1200px) {
+  .modal-wrapper {
+    max-width: 528px;
+    height: 581px;
+  }
+  .modal-form__textarea::placeholder {
+    font-size: 14px;
+    line-height: 1.1666;
+  }
+  .modal-form__checkbox-text {
+    margin-right: 2px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .modal-form__checkbox-link {
+    color: #2196f3;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}

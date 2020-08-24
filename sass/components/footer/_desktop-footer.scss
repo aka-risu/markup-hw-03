@@ -1,0 +1,25 @@
+.footer__wrapper {
+  @media screen and(min-width: 1200px) {
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: left;
+  }
+}
+.address__item:not(:last-child) {
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
+.subscribe-form {
+  @media screen and(min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.form__email {
+  @media screen and(min-width: 1200px) {
+    margin-right: 12px;
+    width: 358px;
+  }
+}

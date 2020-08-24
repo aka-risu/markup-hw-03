@@ -4,14 +4,34 @@
 @import "./utils/mixins";
 @import "./utils/placeholder";
 @import "./base/body";
-@import "./layout/index/index";
+// @import "./layout/index/index";
 
 // @import "./components/header/page-header";
 @import "./components/logo";
-@import "./components/footer/footer";
-@import "./components/modal-window";
+// @import "./components/footer/footer";
+@import "./components/mobile-modal-window";
+@import "./components/tablet-modal-window";
+@import "./components/desktop-modal-window";
 @import "./components/button";
 @import "./components/social-list";
 @import "./components/header/mobile-header";
 @import "./components/header/tablet-header";
 @import "./components/header/desktop-header";
+@import "./layout/index/hero/hero-mobile";
+@import "./layout/index/hero/hero-tablet";
+@import "./layout/index/hero/hero-desktop";
+@import "./layout/index/advantages/advantages-mobile";
+@import "./layout/index/advantages/advantages-tablet";
+@import "./layout/index/advantages/advantages-desktop";
+@import "./layout/index/what-we-do/what-we-do-mobile";
+@import "./layout/index/what-we-do/what-we-do-desktop";
+
+@import "./layout/index/team/team-mobile";
+@import "./layout/index/team/team-tablet";
+@import "./layout/index/team/team-desktop";
+@import "./layout/index/clients/clients-mobile";
+@import "./layout/index/clients/clients-tablet";
+@import "./layout/index/clients/clients-desktop";
+@import "./components/footer/mobile-footer";
+@import "./components/footer/tablet-footer";
+@import "./components/footer/desktop-footer";

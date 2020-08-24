@@ -4,10 +4,18 @@
 @import "./utils/mixins";
 @import "./utils/placeholder";
 @import "./base/body";
-@import "./layout/portfolio/portfolio";
-@import "./components/header/page-header";
-@import "./components/footer/footer";
-@import "./components/modal-window";
+@import "./components/header/mobile-header";
+@import "./components/header/tablet-header";
+@import "./components/header/desktop-header";
+
+@import "./layout/portfolio/mobile-portfolio";
+@import "./layout/portfolio/tablet-portfolio";
+@import "./layout/portfolio/desktop-portfolio";
+
+// @import "./components/modal-window";
 @import "./components/button";
 @import "./components/social-list";
 @import "./components/logo";
+@import "./components/footer/mobile-footer";
+@import "./components/footer/tablet-footer";
+@import "./components/footer/desktop-footer";
